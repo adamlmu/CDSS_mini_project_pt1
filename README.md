@@ -1,6 +1,6 @@
 # CDSS_mini_project_pt1
 
-A lightweight, **bitemporal clinical‑data warehouse** with an interactive Command‑Line Interface (CLI) demonstrating core Clinical Decision‑Support System (CDSS) capabilities required for the **“Temporal Reasoning in Medical IS” mini‑project – Part 1**.citeturn1file0
+A lightweight, **bitemporal clinical‑data warehouse** with an interactive Command‑Line Interface (CLI) demonstrating core Clinical Decision‑Support System (CDSS) capabilities required for the **“Temporal Reasoning in Medical IS” mini‑project – Part 1**.
 
 It stores patients, laboratory observations (with full history), and a local copy of the LOINC dictionary; supports **history, retro‑update and retro‑delete** operations; and delivers CDSS functionality across all dimensions discussed in class.
 
