@@ -25,17 +25,19 @@ It stores patients, laboratory observations (with full history), and a local cop
 
 ```text
 CDSS_mini_project_pt1/
-├── environment.yml          # Conda definition (Python 3.11, SQLAlchemy 2, Pydantic 2, etc.)
-├── main.py                   # Interactive front‑end (entry point)
-└── app/
-    ├── L_TableCore.csv      # LOINC subset
-    ├── project_db.xlsx      # Example lab observations
+├── environment.yml          # Conda definition (Python 3.11, SQLAlchemy 2, etc.)
+├── main.py                   # Interactive terminal front‑end
+├── data/                    # All mutable data lives outside the code package
+│   ├── project_db.xlsx      # Example lab results for the demo seeder
+│   └── L_TableCore.csv      # LOINC subset (code ↔ common name)
+└── app/                     # Pure‑code Python package
     ├── __init__.py
-    ├── config.py            # Loads DATABASE_URL from .env (SQLite fallback)
+    ├── config.py            # Reads .env → DATABASE_URL (SQLite fallback)
     ├── database.py          # Async SQLAlchemy engine & session factory
     ├── models.py            # ORM entities (Patient, Observation, Loinc)
-    ├── schemas.py           # Pydantic validation models
-    └── crud.py              # High‑level data‑access utilities
+    ├── schemas.py           # Pydantic DTOs for validation
+    └── crud.py              # High‑level, bitemporal CRUD helpers
+
 ```
 
 ---
