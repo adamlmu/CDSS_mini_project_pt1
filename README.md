@@ -8,7 +8,7 @@ It stores patients, laboratory observations (with full history), and a local cop
 
 ## 1 How this repository satisfies the assignment
 
-| Requirement (spec §) | Implementation |
+| Requirement (spec) | Implementation |
 |----------------------|----------------|
 | At least **10 patients (5 M + 5 F) with multiple STATES** | `faker`‑driven seeder (`main ➜ option 6`) creates 10 demo patients with realistic gender balance and multi‑state vitals. |
 | Full **LOINC concept dictionary** + return of *relevant rows only* | `app/L_TableCore.csv` loaded on first run; JOINs expose common names in every CLI query. |
@@ -16,7 +16,7 @@ It stores patients, laboratory observations (with full history), and a local cop
 | **2.2 Retro‑update** with audit trail | CLI option 4 – closes the current TXN interval and inserts a new row with the updated value. |
 | **2.3 Retro‑delete** | CLI option 5 – sets `txn_end` on the chosen row; audit preserved. |
 | `now` keyword / optional time | Input helpers default to *now* when HH:MM is omitted, or accept the literal `now`. |
-| DSS **Dimensions** explanation | See § 5. |
+| DSS **Dimensions** explanation | See section 5. |
 | Architecture & User manual | This README. |
 
 ---
