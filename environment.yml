@@ -1,0 +1,20 @@
+name: cdss_adam_itay
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - fastapi
+  - uvicorn
+  - sqlalchemy>=2.0
+  - aiosqlite
+  - pydantic>=2
+  - python-decouple
+  - faker
+  - pandas
+  - openpyxl
+  - pytest
+  - pytest-asyncio
+  - httpx
+  - pip
+  - pip:
+      - python-dotenv
